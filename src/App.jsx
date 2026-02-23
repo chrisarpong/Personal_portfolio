@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import SEO from './components/SEO';
+import ParticleNetwork from './components/ParticleNetwork';
 import './index.css';
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
     <HelmetProvider>
       <div className="app">
         <SEO />
+        <ParticleNetwork />
         <CustomCursor />
-        <div className="aura-bg"></div>
 
         <Header />
 
