@@ -148,7 +148,8 @@
     .hero-container {
         flex-direction: column;
         text-align: center;
-        padding-top: 4rem;
+        padding-top: 2rem;
+        gap: 2rem;
     }
 
     .hero-content {
@@ -163,14 +164,41 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding-top: calc(var(--nav-height) + 1rem);
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
     .hero-actions {
         flex-direction: column;
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
+        gap: 1rem;
+    }
+
+    .hero-actions>* {
+        width: 100%;
     }
 
     .hero-image-box {
-        width: 280px;
-        height: 280px;
+        width: 100%;
+        max-width: 340px;
+        height: 420px;
+        border-radius: 24px;
+    }
+
+    .graphic-glow {
+        width: 250px;
+        height: 250px;
+        right: 50%;
+        transform: translate(50%, -50%);
     }
 }

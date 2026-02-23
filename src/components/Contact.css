@@ -173,11 +173,23 @@
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 0;
+        border-bottom: none;
     }
 
-    .form-group.border-r {
-        border-right: none;
-        border-bottom: 1px solid var(--border-light);
+    .form-group {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+    }
+
+    .submit-group {
+        padding: 1.5rem;
+        justify-content: stretch;
+    }
+
+    .submit-group .btn-primary {
+        width: 100%;
     }
 }
 

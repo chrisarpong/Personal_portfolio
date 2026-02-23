@@ -198,6 +198,11 @@ button {
   transform: translateY(-2px);
 }
 
+.btn-primary:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.4), inset 0 0 5px rgba(139, 92, 246, 0.2);
+}
+
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -216,6 +221,11 @@ button {
 .btn-secondary:hover {
   border-color: var(--border-hover);
   background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px) scale(0.98);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* Sophisticated Reveal Animations */

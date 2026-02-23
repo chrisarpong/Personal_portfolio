@@ -95,7 +95,7 @@
 @media (max-width: 900px) {
     .exp-item {
         grid-template-columns: 1fr;
-        padding: 2rem 0;
+        padding: 1.5rem;
     }
 
     .exp-meta {
