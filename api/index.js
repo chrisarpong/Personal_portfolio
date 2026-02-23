@@ -48,6 +48,10 @@ app.post('/api/send', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Express server running on port ${port}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`Express server running locally on port ${port}`);
+    });
+}
+
+export default app;
