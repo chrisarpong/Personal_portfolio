@@ -7,6 +7,19 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: calc(33.333% - 1px);
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--accent-cyan) 20%, var(--accent-purple) 80%, transparent);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(139, 92, 246, 0.5);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .exp-item {
@@ -50,7 +63,7 @@
     padding-left: 2rem;
     display: flex;
     flex-direction: column;
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    /* Removed old border-left, using the central timeline-line instead */
 }
 
 .exp-header-row {
@@ -93,5 +106,9 @@
 
     .exp-details {
         padding: 1.5rem 0 0 0;
+    }
+
+    .timeline-line {
+        display: none;
     }
 }

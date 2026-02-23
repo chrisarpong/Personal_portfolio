@@ -55,8 +55,7 @@ const Hero = () => {
                     </motion.div>
 
                     <motion.h1 className="hero-title" variants={itemVariants}>
-                        Building Systems,<br />
-                        <span className="text-shimmer">Crafting Solutions</span>
+                        Building Systems, <span className="text-shimmer">Crafting Solutions</span>
                     </motion.h1>
 
                     <motion.p className="hero-desc" variants={itemVariants}>

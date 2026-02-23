@@ -43,6 +43,7 @@ const Experience = () => {
                 </div>
 
                 <div className="experience-list">
+                    <div className="timeline-line"></div>
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}

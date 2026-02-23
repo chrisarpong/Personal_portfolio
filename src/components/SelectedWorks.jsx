@@ -87,6 +87,8 @@ const SelectedWorks = () => {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
                         >
+                            <div className="project-hover-bg"></div>
+
                             <div className="work-meta">
                                 <span className="mono-text work-category">{project.category}</span>
                                 <div className="work-tech mono-text">

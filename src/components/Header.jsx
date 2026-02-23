@@ -41,9 +41,6 @@ const Header = () => {
                         <Download size={16} />
                         <span>Resume</span>
                     </a>
-                    <a href="#contact" className="resume-btn" onClick={() => setMobileMenuOpen(false)}>
-                        Contact
-                    </a>
                     <button
                         className="mobile-menu-toggle"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
