@@ -1,33 +1,29 @@
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Sphere, MeshDistortMaterial, Float } from '@react-three/drei';
+import { TorusKnot, Float } from '@react-three/drei';
 
 const CyberOrb = () => {
-    const sphereRef = useRef();
+    const meshRef = useRef();
 
     useFrame(({ clock }) => {
-        if (sphereRef.current) {
-            sphereRef.current.rotation.x = clock.getElapsedTime() * 0.2;
-            sphereRef.current.rotation.y = clock.getElapsedTime() * 0.3;
+        if (meshRef.current) {
+            meshRef.current.rotation.x = clock.getElapsedTime() * 0.2;
+            meshRef.current.rotation.y = clock.getElapsedTime() * 0.3;
         }
     });
 
     return (
         <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
-            <Sphere ref={sphereRef} args={[1, 64, 64]} scale={1.8}>
-                <MeshDistortMaterial
-                    color="#4ADE80" // Base green
-                    emissive="#06B6D4" // Cyan glow
-                    emissiveIntensity={0.8}
+            <TorusKnot ref={meshRef} args={[1, 0.3, 150, 20]} scale={1.2}>
+                <meshStandardMaterial
+                    color="#06B6D4"
                     wireframe={true}
+                    emissive="#06B6D4"
+                    emissiveIntensity={0.8}
                     transparent={true}
                     opacity={0.8}
-                    distort={0.4} // Adds the fluid, shifting shape effect
-                    speed={2} // Speed of the fluid distortion
-                    roughness={0.2}
-                    metalness={0.8}
                 />
-            </Sphere>
+            </TorusKnot>
         </Float>
     );
 };

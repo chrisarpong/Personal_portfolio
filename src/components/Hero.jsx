@@ -54,17 +54,17 @@ const Hero = () => {
                 >
                     <motion.div className="hero-badge" variants={itemVariants}>
                         <span className="status-indicator"></span>
-                        <span className="mono-text">Fullstack Developer</span>
+                        <span className="mono-text">IT Student & Aspiring Developer</span>
                     </motion.div>
 
                     <motion.h1 className="hero-title" variants={itemVariants}>
-                        Engineering the<br />
-                        <span className="text-shimmer">Future of Web</span>
+                        Building Systems,<br />
+                        <span className="text-shimmer">Crafting Solutions</span>
                     </motion.h1>
 
                     <motion.p className="hero-desc" variants={itemVariants}>
-                        Architecting scalable solutions and crafting precise interactive experiences.
-                        Bridging the gap between complex backend systems and elegant frontend interfaces.
+                        Passionate IT student dedicated to becoming a Fullstack Developer.
+                        I bridge the gap between complex backend logic and sleek frontend interfaces to build modern web applications.
                     </motion.p>
 
                     <motion.div className="hero-actions" variants={itemVariants}>
