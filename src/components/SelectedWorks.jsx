@@ -30,6 +30,32 @@ const projects = [
         tech: ['Python', 'FastAPI', 'OpenAI', 'Next.js', 'Pinecone Vector DB', 'TailwindCSS'],
         links: { demo: '#', code: '#' },
         color: '#8b5cf6'
+    },
+    {
+        title: 'Project Title Three',
+        category: 'CATEGORY • 2024',
+        description: 'Edit this placeholder project description with details about your work and the challenges you solved.',
+        details: {
+            problem: 'What was the core issue or customer requirement you were addressing?',
+            architecture: 'What stack or system design decisions did you make? How did you build it?',
+            result: 'What were the tangible outcomes or performance metrics achieved?'
+        },
+        tech: ['React', 'Node.js', 'PostgreSQL'],
+        links: { demo: '#', code: '#' },
+        color: '#10b981'
+    },
+    {
+        title: 'Project Title Four',
+        category: 'CATEGORY • 2023',
+        description: 'Edit this placeholder project description with details about your work and the challenges you solved.',
+        details: {
+            problem: 'What was the core issue or customer requirement you were addressing?',
+            architecture: 'What stack or system design decisions did you make? How did you build it?',
+            result: 'What were the tangible outcomes or performance metrics achieved?'
+        },
+        tech: ['Typescript', 'Express', 'MongoDB'],
+        links: { demo: '#', code: '#' },
+        color: '#f59e0b'
     }
 ];
 
