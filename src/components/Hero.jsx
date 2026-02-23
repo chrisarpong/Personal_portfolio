@@ -54,7 +54,7 @@ const Hero = () => {
                 >
                     <motion.div className="hero-badge" variants={itemVariants}>
                         <span className="status-indicator"></span>
-                        <span className="mono-text">IT Student & Aspiring Developer</span>
+                        <span className="mono-text">IT professional and Fullstack Developer</span>
                     </motion.div>
 
                     <motion.h1 className="hero-title" variants={itemVariants}>
