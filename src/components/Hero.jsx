@@ -54,7 +54,7 @@ const Hero = () => {
                     </motion.h1>
 
                     <motion.p className="hero-desc" variants={itemVariants}>
-                        Passionate IT student dedicated to becoming a Fullstack Developer.
+                        Passionate IT professional and Fullstack Developer.
                         I bridge the gap between complex backend logic and sleek frontend interfaces to build modern web applications.
                     </motion.p>
 
