@@ -9,18 +9,17 @@
 
 .hero-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    text-align: center;
+    justify-content: space-between;
+    gap: 4rem;
 }
 
 .hero-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 900px;
+    align-items: flex-start;
+    max-width: 600px;
     z-index: 2;
 }
 
@@ -70,34 +69,33 @@
 .hero-actions {
     display: flex;
     gap: 1rem;
-    justify-content: center;
 }
 
-/* --- Centered Image Box Animations & Styles --- */
+/* --- Split Layout Image Box Styles --- */
 .hero-image-wrapper {
+    flex: 1;
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    /* Align box to the right */
     align-items: center;
     z-index: 1;
-    margin-top: 2rem;
 }
 
 .hero-image-box {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 360px;
+    height: 480px;
+    /* Make it more portrait shaped */
     border-radius: 24px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(15, 20, 40, 0.5);
-    /* Deep translucent blue */
     backdrop-filter: blur(20px);
     border: 1px solid rgba(6, 182, 212, 0.3);
-    /* Cyan border */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(6, 182, 212, 0.1);
     z-index: 2;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -109,32 +107,51 @@
     border-color: rgba(6, 182, 212, 0.6);
 }
 
-.image-placeholder-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.hero-portrait {
     width: 100%;
-    border: 2px dashed rgba(6, 182, 212, 0.2);
-    border-radius: 20px;
-    margin: 10px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    /* Focus on the face/upper body */
+    transition: transform 0.5s ease;
+}
+
+.hero-image-box:hover .hero-portrait {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
 }
 
 .graphic-glow {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 380px;
-    height: 380px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, rgba(139, 92, 246, 0.15) 30%, transparent 70%);
+    right: 5%;
+    /* Glow stays anchored near the image box */
+    transform: translateY(-50%);
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(139, 92, 246, 0.1) 30%, transparent 70%);
     border-radius: 50%;
     filter: blur(40px);
     z-index: 0;
     pointer-events: none;
-    /* Let clicks pass through to the image box */
+}
+
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .hero-content {
+        align-items: center;
+        max-width: 800px;
+    }
+
+    .hero-image-wrapper {
+        justify-content: center;
+        margin-top: 3rem;
+    }
 }
 
 @media (max-width: 768px) {

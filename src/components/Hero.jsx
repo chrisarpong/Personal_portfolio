@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import MagneticButton from './MagneticButton';
-import './Hero.css';
+import heroImage from '../assets/2.jpg';
 import './Hero.css';
 
 const containerVariants = {
@@ -81,10 +81,7 @@ const Hero = () => {
                     animate="visible"
                 >
                     <div className="hero-image-box glass-panel">
-                        {/* Placeholder for user image */}
-                        <div className="image-placeholder-content">
-                            <span className="mono-text text-cyan">[ Your Image Here ]</span>
-                        </div>
+                        <img src={heroImage} alt="Christian Sarpong" className="hero-portrait" />
                     </div>
                     <div className="graphic-glow"></div>
                 </motion.div>
