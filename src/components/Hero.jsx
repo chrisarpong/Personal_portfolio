@@ -1,8 +1,5 @@
 import { motion } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
 import MagneticButton from './MagneticButton';
-import CyberOrb from './CyberOrb';
 import './Hero.css';
 import './Hero.css';
 
@@ -78,27 +75,18 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.div
-                    className="hero-graphic-wrapper"
+                    className="hero-image-wrapper"
                     variants={graphicVariants}
                     initial="hidden"
                     animate="visible"
                 >
-                    <div className="hero-graphic" style={{ height: '400px', width: '100%', position: 'relative' }}>
-                        <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-                            <ambientLight intensity={0.5} />
-                            <pointLight position={[10, 10, 10]} intensity={1} color="#06B6D4" />
-                            <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8b5cf6" />
-                            <CyberOrb />
-                            <Environment preset="city" />
-                            <OrbitControls
-                                enableZoom={false}
-                                enablePan={false}
-                                autoRotate={true}
-                                autoRotateSpeed={1}
-                            />
-                        </Canvas>
-                        <div className="graphic-glow" style={{ pointerEvents: 'none' }}></div>
+                    <div className="hero-image-box glass-panel">
+                        {/* Placeholder for user image */}
+                        <div className="image-placeholder-content">
+                            <span className="mono-text text-cyan">[ Your Image Here ]</span>
+                        </div>
                     </div>
+                    <div className="graphic-glow"></div>
                 </motion.div>
             </div>
         </section>
