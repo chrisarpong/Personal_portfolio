@@ -11,9 +11,6 @@ const Footer = () => {
                             <span className="logo-dot"></span>
                             Christian Sarpong
                         </a>
-                        <p className="footer-desc mono-text">
-                            Engineering the Future of Web
-                        </p>
                     </div>
 
                     <div className="footer-links-wrapper">

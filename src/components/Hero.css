@@ -48,9 +48,11 @@
 }
 
 .hero-title {
-    margin-bottom: 1.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
     line-height: 1.05;
     color: #fff;
+    letter-spacing: -0.02em;
 }
 
 /* Cyber glowing gradient for the hero text */
@@ -63,9 +65,12 @@
 }
 
 .hero-desc {
-    max-width: 600px;
-    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    max-width: 100%;
+    /* Allow text to spread naturally across the flex column */
+    margin-bottom: 2rem;
     line-height: 1.6;
+    color: var(--text-secondary);
 }
 
 .hero-actions {
@@ -88,9 +93,9 @@
 
 .hero-image-box {
     position: relative;
-    width: 480px;
-    height: 640px;
-    /* Much larger, premium portrait dimensions */
+    width: 420px;
+    height: 560px;
+    /* Optimized portrait dimensions to fit the viewport safely */
     border-radius: 32px;
     overflow: hidden;
     display: flex;

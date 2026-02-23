@@ -49,11 +49,6 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    <motion.div className="hero-badge" variants={itemVariants}>
-                        <span className="status-indicator"></span>
-                        <span className="mono-text">IT professional and Fullstack Developer</span>
-                    </motion.div>
-
                     <motion.h1 className="hero-title" variants={itemVariants}>
                         Building Systems, <span className="text-shimmer">Crafting Solutions</span>
                     </motion.h1>
