@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* Colors - Cyber / Dark Glass Theme */
+  --bg-dark: #05050f;
+  /* Very deep navy/black */
+  --bg-card: rgba(15, 20, 40, 0.4);
+  /* Translucent dark blueish card backing */
+
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  /* Slate */
+  --text-muted: #64748b;
+
+  /* Accents - Neon Glowing Tech */
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+  --accent-neon: #38bdf8;
+  /* Bright sky blue for interactions */
+
+  /* Glassmorphism Borders */
+  --border-light: rgba(255, 255, 255, 0.1);
+  /* Subtle white frosted edges */
+  --border-glow: rgba(56, 189, 248, 0.4);
+  /* Glow on hover */
+  --border-hover: rgba(255, 255, 255, 0.25);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Layout Constants */
+  --max-width: 1400px;
+  --nav-height: 80px;
+
+  /* Transitions */
+  --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  /* Tighter tracking for premium feel */
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 8rem 0;
+  position: relative;
+}
+
+/* Structural Grid Line Utilities (Inspiration from Increase) */
+.border-t {
+  border-top: 1px solid var(--border-light);
+}
+
+.border-b {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.border-l {
+  border-left: 1px solid var(--border-light);
+}
+
+.border-r {
+  border-right: 1px solid var(--border-light);
+}
+
+/* Advanced Cyber Glassmorphism Utilities */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  /* Edge light + subtle drop shadow */
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.4),
+    0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: var(--transition-slow);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-hover);
+  background: rgba(20, 25, 50, 0.5);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    0 8px 32px 0 rgba(6, 182, 212, 0.1);
+  /* Subtle cyan glow on hover */
+}
+
+/* Technical / Mono highlights */
+.mono-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Glowing Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2));
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid var(--accent-neon);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3), inset 0 0 10px rgba(139, 92, 246, 0.2);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-fast);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.4), rgba(139, 92, 246, 0.4));
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.6), inset 0 0 15px rgba(139, 92, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-light);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Sophisticated Reveal Animations */
+@keyframes fadeInUpSlow {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUpSlow 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* The Magical Cyber Aura Background */
+.aura-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Base glowing sphere */
+.aura-bg::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(6, 182, 212, 0) 70%);
+  filter: blur(100px);
+  animation: floatOrb 15s ease-in-out infinite alternate;
+}
+
+/* Secondary deep purple sphere */
+.aura-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0) 70%);
+  filter: blur(120px);
+  animation: floatOrb2 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(5%, 10%) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-5%, -5%) scale(0.95);
+  }
+}
+
+@keyframes floatOrb2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-10%, -5%) scale(1.05);
+  }
+
+  100% {
+    transform: translate(5%, 10%) scale(0.9);
+  }
+}
+
+/* Cyber Grid Overlay */
+.cyber-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  pointer-events: none;
+  animation: gridPan 30s linear infinite;
+  transform-origin: top left;
+}
+
+@keyframes gridPan {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-50px, -50px);
+  }
+}

@@ -1,0 +1,114 @@
+.selected-works {
+    position: relative;
+    padding-bottom: 0;
+}
+
+.works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.work-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    transition: var(--transition-slow);
+    padding: 2rem;
+}
+
+.work-item:hover {
+    transform: translateY(-4px);
+}
+
+.work-meta {
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.work-category {
+    color: var(--text-primary);
+    opacity: 0.9;
+}
+
+.work-tech {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.work-details {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.work-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.work-desc {
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+.link-arrow {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.arrow-icon {
+    transition: var(--transition-fast);
+}
+
+.link-arrow:hover {
+    border-bottom-color: var(--text-primary);
+    color: var(--accent-cyan);
+}
+
+.link-arrow:hover .arrow-icon {
+    transform: translate(2px, -2px);
+    color: var(--accent-cyan);
+}
+
+@media (max-width: 900px) {
+    .work-item {
+        grid-template-columns: 1fr;
+        padding: 2rem 0;
+    }
+
+    .work-meta {
+        padding: 0 0 2rem 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border-light);
+        gap: 2rem;
+    }
+
+    .work-tech {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .work-details {
+        padding: 2rem 0 0 0;
+    }
+}
